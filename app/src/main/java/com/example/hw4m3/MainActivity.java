@@ -23,13 +23,12 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ItemModel("Бразилия", "Бразилия", R.drawable.ic_br_flag));
         list.add(new ItemModel("Аргентино", "Буэнос-Айрес", R.drawable.ic_ar_flag));
         list.add(new ItemModel("Колумбия", "Богота", R.drawable.ic_co_flag));
-        list.add(new ItemModel("Уругвей", "Монтевидео", R.drawable.ic_uy_flag));
+        list.add(new ItemModel("Уругвай", "Монтевидео", R.drawable.ic_uy_flag));
         list.add(new ItemModel("Чили", "Сантьяго", R.drawable.ic_cl_flag));
 
         recyclerAdapter = new RecyclerAdapter(list, new IOnClick() {
             @Override
             public void onClick(int pos) {
-                Toast.makeText(MainActivity.this, "pos" + pos, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 if (pos == 0) {
                     intent.putExtra("flag", "br"); // Бразилия
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("flag", "co"); // Колумбия
                     Log.d("pizza", "co");
                 } else if (pos == 3) {
-                    intent.putExtra("flag", "uy"); // Уругвей
+                    intent.putExtra("flag", "uy"); // Уругвай
                     Log.d("pizza", "uy");
                 } else if (pos == 4) {
                     intent.putExtra("flag", "cl"); // Чили

@@ -24,12 +24,38 @@ public class SecondActivity extends AppCompatActivity {
         String extra = getIntent().getStringExtra("flag");
         if (extra.equals("br")) {
             Log.d("pizzapizza", "Brazil");
-            list2.add(new ItemModel("Сан-Паулу", "Бразилия", R.drawable.ic_launcher_foreground));
-            list2.add(new ItemModel("Салвадор", "Бразилия", R.drawable.ic_launcher_foreground));
-            list2.add(new ItemModel("Рио-де-Жанейро", "Бразилия", R.drawable.ic_launcher_foreground));
-            list2.add(new ItemModel("Манаус", "Бразилия", R.drawable.ic_launcher_foreground));
-            list2.add(new ItemModel("Форталеза", "Бразилия", R.drawable.ic_launcher_foreground));
-        } else {
+            list2.add(new ItemModel("Сан-Паулу", "Бразилия", R.drawable.ic_br_flag));
+            list2.add(new ItemModel("Салвадор", "Бразилия", R.drawable.ic_br_flag));
+            list2.add(new ItemModel("Рио-де-Жанейро", "Бразилия", R.drawable.ic_br_flag));
+            list2.add(new ItemModel("Манаус", "Бразилия", R.drawable.ic_br_flag));
+            list2.add(new ItemModel("Форталеза", "Бразилия", R.drawable.ic_br_flag));
+        } else if (extra.equals("ar")) {
+            list2.add(new ItemModel("Буэнос-Айрес", "Аргентино", R.drawable.ic_ar_flag));
+            list2.add(new ItemModel("Кордова", "Аргентино", R.drawable.ic_ar_flag));
+            list2.add(new ItemModel("Росарио", "Аргентино", R.drawable.ic_ar_flag));
+            list2.add(new ItemModel("Сальта", "Аргентино", R.drawable.ic_ar_flag));
+            list2.add(new ItemModel("Санта-Фе", "Аргентино", R.drawable.ic_ar_flag));
+        } else if (extra.equals("co")) {
+            list2.add(new ItemModel("Богота", "Колумбия", R.drawable.ic_co_flag));
+            list2.add(new ItemModel("Медельин", "Колумбия", R.drawable.ic_co_flag));
+            list2.add(new ItemModel("Кали", "Колумбия", R.drawable.ic_co_flag));
+            list2.add(new ItemModel("Барранкилья", "Колумбия", R.drawable.ic_co_flag));
+            list2.add(new ItemModel("Картахена", "Колумбия", R.drawable.ic_co_flag));
+        } else if (extra.equals("uy")) {
+            list2.add(new ItemModel("Монтевидео", "Уругвай", R.drawable.ic_uy_flag));
+            list2.add(new ItemModel("Сальто", "Уругвай", R.drawable.ic_uy_flag));
+            list2.add(new ItemModel("Сьюдад-де-ла-Коста", "Уругвай", R.drawable.ic_uy_flag));
+            list2.add(new ItemModel("Пайсанду", "Уругвай", R.drawable.ic_uy_flag));
+            list2.add(new ItemModel("Лас-Пьедрас", "Уругвай", R.drawable.ic_uy_flag));
+        } else if (extra.equals("cl")) {
+            list2.add(new ItemModel("Сантьяго", "Чили", R.drawable.ic_cl_flag));
+            list2.add(new ItemModel("Вальпараисо", "Чили", R.drawable.ic_cl_flag));
+            list2.add(new ItemModel("Консепсьон", "Чили", R.drawable.ic_cl_flag));
+            list2.add(new ItemModel("Ла-Серена", "Чили", R.drawable.ic_cl_flag));
+            list2.add(new ItemModel("Антофагаста", "Чили", R.drawable.ic_cl_flag));
+        }
+
+        else {
             list2.add(new ItemModel("bruh", "for debug", R.drawable.ic_launcher_foreground));
         }
 
