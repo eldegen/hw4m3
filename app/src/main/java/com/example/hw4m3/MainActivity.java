@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,13 +18,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recycler);
         ArrayList<ItemModel> list = new ArrayList<>();
-        list.add(new ItemModel("Бразилия", R.drawable.ic_br_flag));
-        list.add(new ItemModel("Аргентино", R.drawable.ic_ar_flag));
-        list.add(new ItemModel("Колумбия", R.drawable.ic_co_flag));
-        list.add(new ItemModel("Уругвей", R.drawable.ic_uy_flag));
-        list.add(new ItemModel("Чили", R.drawable.ic_cl_flag));
+        list.add(new ItemModel("Бразилия", "Бразилия", R.drawable.ic_br_flag));
+        list.add(new ItemModel("Аргентино", "Буэнос-Айрес", R.drawable.ic_ar_flag));
+        list.add(new ItemModel("Колумбия", "Богота", R.drawable.ic_co_flag));
+        list.add(new ItemModel("Уругвей", "Монтевидео", R.drawable.ic_uy_flag));
+        list.add(new ItemModel("Чили", "Сантьяго", R.drawable.ic_cl_flag));
 
-        recyclerAdapter = new RecyclerAdapter(list);
+        recyclerAdapter = new RecyclerAdapter(list, new IOnClick() {
+            @Override
+            public void onClick(int pos) {
+                Toast.makeText(MainActivity.this, "pos" + pos, Toast.LENGTH_SHORT).show();
+            }
+        });
         recyclerView.setAdapter(recyclerAdapter);
     }
 }
