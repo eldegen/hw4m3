@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
-    ArrayList<String> list = new ArrayList<>();
+    ArrayList<ItemModel> list = new ArrayList<>();
 
-    public RecyclerAdapter(ArrayList<String> list) {
+    public RecyclerAdapter(ArrayList<ItemModel> list) {
         this.list = list;
     }
 
