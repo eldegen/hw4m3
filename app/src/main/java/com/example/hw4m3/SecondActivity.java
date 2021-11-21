@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,7 +21,17 @@ public class SecondActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler2);
         ArrayList<ItemModel> list2 = new ArrayList<>();
 
-        list2.add(new ItemModel("a", "b", R.drawable.ic_launcher_foreground));
+        String extra = getIntent().getStringExtra("flag");
+        if (extra.equals("br")) {
+            Log.d("pizzapizza", "Brazil");
+            list2.add(new ItemModel("Сан-Паулу", "Бразилия", R.drawable.ic_launcher_foreground));
+            list2.add(new ItemModel("Салвадор", "Бразилия", R.drawable.ic_launcher_foreground));
+            list2.add(new ItemModel("Рио-де-Жанейро", "Бразилия", R.drawable.ic_launcher_foreground));
+            list2.add(new ItemModel("Манаус", "Бразилия", R.drawable.ic_launcher_foreground));
+            list2.add(new ItemModel("Форталеза", "Бразилия", R.drawable.ic_launcher_foreground));
+        } else {
+            list2.add(new ItemModel("bruh", "for debug", R.drawable.ic_launcher_foreground));
+        }
 
         recyclerAdapter = new SecondRecyclerAdapter(list2, new IOnClick() {
             @Override
