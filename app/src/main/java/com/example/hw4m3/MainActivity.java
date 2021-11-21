@@ -3,6 +3,7 @@ package com.example.hw4m3;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(int pos) {
                 Toast.makeText(MainActivity.this, "pos" + pos, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
         recyclerView.setAdapter(recyclerAdapter);
